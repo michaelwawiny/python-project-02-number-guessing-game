@@ -1,0 +1,276 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000000;
+  color: #000000;
+
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.game-container {
+  width: 100%;
+  max-width: 550px;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border: 2px solid #87cefa;
+  border-radius: 18px;
+
+  box-shadow: 0 0 25px rgba(135, 206, 250, 0.2);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 14px;
+}
+
+/* =========================
+   GAME SETTINGS
+========================= */
+
+.game-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 13px;
+
+  background: #ffffff;
+  color: #000000;
+
+  border: 1px solid #87cefa;
+  border-radius: 8px;
+
+  font-size: 15px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  padding: 13px;
+
+  border: 1px solid #87cefa;
+  border-radius: 8px;
+
+  background: #87cefa;
+  color: #000000;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #000000;
+  color: #ffffff;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =========================
+   GAME AREA
+========================= */
+
+.game-area {
+  padding: 20px;
+
+  border: 1px solid #87cefa;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.number-range {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.attempts {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#attempts {
+  color: #000000;
+  background: #87cefa;
+
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+/* =========================
+   INPUT AREA
+========================= */
+
+.input-area {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px;
+
+  border: 1px solid #87cefa;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #000000;
+
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #87cefa;
+}
+
+/* =========================
+   GAME MESSAGE
+========================= */
+
+#message {
+  min-height: 45px;
+  margin-top: 20px;
+
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.game-actions {
+  margin-top: 15px;
+}
+
+#restart-button {
+  width: 100%;
+  background: #000000;
+  color: #ffffff;
+}
+
+#restart-button:hover {
+  background: #87cefa;
+  color: #000000;
+}
+
+/* =========================
+   STATISTICS
+========================= */
+
+.statistics {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.statistics h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.stat-box {
+  padding: 15px 5px;
+
+  border: 1px solid #87cefa;
+  border-radius: 10px;
+}
+
+.stat-box h3 {
+  font-size: 23px;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  font-size: 12px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE RESPONSIVENESS
+========================= */
+
+@media (max-width: 480px) {
+  .game-container {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 21px;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    gap: 5px;
+  }
+
+  .stat-box p {
+    font-size: 10px;
+  }
+}
